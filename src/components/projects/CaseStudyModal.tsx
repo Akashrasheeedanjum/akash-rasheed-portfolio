@@ -2,8 +2,10 @@
 
 import { useEffect, useId, useRef } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { ArrowUpRight, X } from "lucide-react";
+import { ArrowUpRight, ExternalLink, X } from "lucide-react";
 import type { Project } from "@/data/projects";
+import { siteConfig } from "@/data/site";
+import { GithubIcon } from "@/components/ui/SocialIcons";
 
 interface CaseStudyModalProps {
   project: Project | null;
@@ -80,6 +82,40 @@ export function CaseStudyModal({ project, onClose }: CaseStudyModalProps) {
                   <p className="mt-2 max-w-2xl text-sm text-text-muted sm:text-base">
                     {project.tagline}
                   </p>
+                  <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+                    {project.liveUrl ? (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-secondary !min-h-10 !px-4 !text-sm"
+                      >
+                        Live Project
+                        <ExternalLink size={14} aria-hidden />
+                      </a>
+                    ) : null}
+                    {project.githubUrl ? (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-secondary !min-h-10 !px-4 !text-sm"
+                      >
+                        <GithubIcon size={14} />
+                        Source Code
+                      </a>
+                    ) : (
+                      <a
+                        href={siteConfig.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-secondary !min-h-10 !px-4 !text-sm"
+                      >
+                        <GithubIcon size={14} />
+                        GitHub Profile
+                      </a>
+                    )}
+                  </div>
                 </div>
 
                 <button

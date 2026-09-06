@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { navLinks, siteConfig } from "@/data/site";
+import { GithubIcon, LinkedinIcon } from "@/components/ui/SocialIcons";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -36,10 +37,10 @@ export function Footer() {
 
           <div className="flex gap-3">
             <SocialLink href={siteConfig.github} label="GitHub">
-              <Github size={18} aria-hidden />
+              <GithubIcon size={18} />
             </SocialLink>
             <SocialLink href={siteConfig.linkedin} label="LinkedIn">
-              <Linkedin size={18} aria-hidden />
+              <LinkedinIcon size={18} />
             </SocialLink>
             <SocialLink href={`mailto:${siteConfig.email}`} label="Email">
               <Mail size={18} aria-hidden />

@@ -16,7 +16,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-glow pt-[calc(var(--nav-height)+2.5rem)] pb-16 md:pb-24"
+      className="relative overflow-hidden bg-glow pt-[calc(var(--nav-height)+1.5rem)] pb-12 sm:pt-[calc(var(--nav-height)+2.5rem)] sm:pb-16 md:pb-24"
       aria-labelledby="hero-heading"
     >
       <div className="pointer-events-none absolute inset-0 bg-grid" aria-hidden />
@@ -54,7 +54,7 @@ export function Hero() {
           </motion.p>
 
           <motion.p
-            className="mt-5 font-[family-name:var(--font-mono)] text-sm tracking-wide text-accent-strong"
+            className="mt-5 break-words font-[family-name:var(--font-mono)] text-[0.78rem] leading-relaxed tracking-wide text-accent-strong sm:text-sm"
             initial={reduceMotion ? false : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.18 }}
@@ -63,16 +63,19 @@ export function Hero() {
           </motion.p>
 
           <motion.div
-            className="mt-8 flex flex-wrap gap-3"
+            className="mt-8 flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap"
             initial={reduceMotion ? false : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.24 }}
           >
-            <a href="#work" className="btn btn-primary">
+            <a href="#work" className="btn btn-primary w-full sm:w-auto">
               View My Work
               <ArrowDownRight size={18} aria-hidden />
             </a>
-            <a href="#contact" className="btn btn-secondary">
+            <a href="#resume" className="btn btn-secondary w-full sm:w-auto">
+              Download Resume
+            </a>
+            <a href="#contact" className="btn btn-secondary w-full sm:w-auto">
               Let&apos;s Talk
               <ArrowRight size={18} aria-hidden />
             </a>

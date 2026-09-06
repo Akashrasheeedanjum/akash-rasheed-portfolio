@@ -42,10 +42,11 @@ export function Navbar() {
       >
         <a
           href="#home"
-          className="font-[family-name:var(--font-display)] text-[0.95rem] font-semibold tracking-[0.08em] text-text"
+          className="min-w-0 truncate font-[family-name:var(--font-display)] text-[0.85rem] font-semibold tracking-[0.08em] text-text sm:text-[0.95rem]"
           onClick={close}
         >
-          AKASH RASHEED
+          <span className="sm:hidden">AKASH</span>
+          <span className="hidden sm:inline">AKASH RASHEED</span>
         </a>
 
         <ul className="hidden items-center gap-1 lg:flex">
@@ -61,7 +62,14 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <a
+            href={siteConfig.resumePath}
+            download="Akash-Rasheed-Resume.pdf"
+            className="btn btn-secondary hidden !min-h-11 !px-4 !text-sm md:inline-flex"
+          >
+            Resume
+          </a>
           <a
             href="#contact"
             className="btn btn-primary hidden sm:inline-flex !min-h-11 !px-5 !text-sm"
@@ -105,6 +113,16 @@ export function Navbar() {
                 </li>
               ))}
               <li className="pt-2">
+                <a
+                  href={siteConfig.resumePath}
+                  download="Akash-Rasheed-Resume.pdf"
+                  className="btn btn-secondary w-full"
+                  onClick={close}
+                >
+                  Download Resume
+                </a>
+              </li>
+              <li className="pt-1">
                 <a
                   href="#contact"
                   className="btn btn-primary w-full"

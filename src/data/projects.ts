@@ -20,6 +20,10 @@ export interface Project {
   features: string[];
   accent: string;
   accentMuted: string;
+  /** Live demo / deployed app — leave empty if private */
+  liveUrl?: string;
+  /** GitHub repository — leave empty if private */
+  githubUrl?: string;
   caseStudy: ProjectCaseStudy;
 }
 
@@ -30,7 +34,7 @@ export const projects: Project[] = [
     tagline: "Scalable marketplace platform",
     description:
       "A scalable marketplace platform connecting immigration seekers, advisors, and companies through profiles, services, bookings, payments, communication, and verification workflows.",
-    category: "Full-Stack Platform",
+    category: "Platform",
     technologies: [
       "Next.js",
       "NestJS",
@@ -63,6 +67,8 @@ export const projects: Project[] = [
     ],
     accent: "#3D8BFF",
     accentMuted: "rgba(61, 139, 255, 0.12)",
+    liveUrl: "",
+    githubUrl: "",
     caseStudy: {
       overview:
         "A multi-sided marketplace connecting immigration seekers, advisors, and companies. The platform supports profiles, service listings, bookings, payments, messaging, video calls, and verification workflows in a single production system.",
@@ -127,7 +133,7 @@ export const projects: Project[] = [
     tagline: "Custom business operations platform",
     description:
       "A customized business management platform designed to streamline day-to-day milk store operations.",
-    category: "Business Application",
+    category: "Business",
     technologies: [
       "Python",
       "Django",
@@ -148,6 +154,8 @@ export const projects: Project[] = [
     ],
     accent: "#2DD4A8",
     accentMuted: "rgba(45, 212, 168, 0.12)",
+    liveUrl: "",
+    githubUrl: "https://github.com/Akashrasheeedanjum/Awan_milk_point",
     caseStudy: {
       overview:
         "A tailored operations platform for milk store businesses—covering sales, purchases, customers, suppliers, payments, and employees with role-based access for admin, manager, and staff.",
@@ -197,7 +205,7 @@ export const projects: Project[] = [
     tagline: "Desktop campaign automation",
     description:
       "A desktop application that helps companies import customer data and automate bulk email campaigns.",
-    category: "Desktop Application",
+    category: "Desktop",
     technologies: ["Python", "Tkinter", "PyQt", "Excel", "PyInstaller"],
     features: [
       "Excel import",
@@ -209,6 +217,8 @@ export const projects: Project[] = [
     ],
     accent: "#F5A524",
     accentMuted: "rgba(245, 165, 36, 0.12)",
+    liveUrl: "",
+    githubUrl: "",
     caseStudy: {
       overview:
         "A desktop tool for importing customer lists from Excel, composing templates, and sending bulk email campaigns—packaged as a standalone executable for easy deployment across machines.",
@@ -242,6 +252,153 @@ export const projects: Project[] = [
       ],
       result:
         "Delivered a practical desktop utility that turns Excel customer lists into runnable bulk email campaigns—deployable as a standalone app without requiring a web infrastructure.",
+    },
+  },
+  {
+    id: "matchvault",
+    title: "MatchVault",
+    tagline: "Live full-stack web application",
+    description:
+      "A TypeScript web application with a deployed production frontend — built for real user-facing workflows and modern full-stack delivery.",
+    category: "Web",
+    technologies: ["TypeScript", "Next.js", "React", "Vercel"],
+    features: [
+      "Deployed live application",
+      "TypeScript codebase",
+      "Modern frontend architecture",
+      "Production hosting on Vercel",
+    ],
+    accent: "#8B7CFF",
+    accentMuted: "rgba(139, 124, 255, 0.12)",
+    liveUrl: "https://match-vault.vercel.app",
+    githubUrl: "https://github.com/Akashrasheeedanjum/MatchVault",
+    caseStudy: {
+      overview:
+        "MatchVault is a live TypeScript web application deployed on Vercel, demonstrating end-to-end delivery from codebase to production URL.",
+      problem:
+        "Many portfolio projects never reach a shareable production environment. Recruiters and clients need proof that an engineer can ship working software, not only local demos.",
+      solution:
+        "Built and deployed MatchVault as a production web app with a public live URL and an open GitHub repository for review.",
+      contribution: [
+        "Implemented the application in TypeScript",
+        "Prepared the project for production deployment",
+        "Published a live demo for evaluation and feedback",
+      ],
+      architecture: [
+        "TypeScript application structure",
+        "Frontend deployed to Vercel",
+        "Source available on GitHub for review",
+      ],
+      technologies: ["TypeScript", "Next.js", "React", "Vercel"],
+      features: [
+        "Public live demo",
+        "GitHub source access",
+        "Production deployment workflow",
+      ],
+      challenges: [
+        "Shipping a stable public build suitable for demos",
+        "Keeping frontend and deployment configuration aligned",
+      ],
+      result:
+        "A live, shareable web application that demonstrates production deployment and modern TypeScript development.",
+    },
+  },
+  {
+    id: "pos-system",
+    title: "POS System",
+    tagline: "Point of sale frontend + backend",
+    description:
+      "A point-of-sale style system with separate frontend and backend repositories — including a live frontend demo for business operations workflows.",
+    category: "Web",
+    technologies: ["TypeScript", "React", "Node.js", "Vercel"],
+    features: [
+      "Separate frontend and backend services",
+      "Live frontend demo",
+      "TypeScript across the stack",
+      "Business operations UI",
+    ],
+    accent: "#2DD4A8",
+    accentMuted: "rgba(45, 212, 168, 0.14)",
+    liveUrl: "https://pos-frontend-five-rust.vercel.app",
+    githubUrl: "https://github.com/Akashrasheeedanjum/POS_Frontend",
+    caseStudy: {
+      overview:
+        "A POS-oriented platform split into frontend and backend codebases, with a deployed frontend for interactive demos of sales/operations workflows.",
+      problem:
+        "Retail and operations tools need reliable UI and API separation so teams can iterate on business workflows without tightly coupling presentation and server logic.",
+      solution:
+        "Built POS_Frontend and POS_Backend as dedicated TypeScript services, with the frontend deployed for live demonstration.",
+      contribution: [
+        "Developed the POS frontend experience",
+        "Implemented supporting backend service structure",
+        "Deployed a live frontend demo for review",
+      ],
+      architecture: [
+        "Frontend application (POS_Frontend)",
+        "Backend API service (POS_Backend)",
+        "Vercel-hosted frontend demo",
+      ],
+      technologies: ["TypeScript", "React", "Node.js", "Vercel"],
+      features: [
+        "Live frontend demo",
+        "Separated frontend/backend repositories",
+        "TypeScript implementation",
+      ],
+      challenges: [
+        "Keeping frontend and backend contracts aligned across repos",
+        "Preparing a stable public demo environment",
+      ],
+      result:
+        "A demonstrable POS-style system with clear frontend/backend separation and a live URL for impressions.",
+    },
+  },
+  {
+    id: "food-safety-backend",
+    title: "Food Safety Quality Backend",
+    tagline: "Backend API for quality workflows",
+    description:
+      "A TypeScript backend focused on food safety and quality workflows — built for structured API delivery and maintainable server-side logic.",
+    category: "Backend",
+    technologies: ["TypeScript", "NestJS", "Node.js", "REST APIs"],
+    features: [
+      "Backend API structure",
+      "TypeScript implementation",
+      "Quality/safety domain workflows",
+      "Maintainable server architecture",
+    ],
+    accent: "#F5A524",
+    accentMuted: "rgba(245, 165, 36, 0.12)",
+    liveUrl: "",
+    githubUrl: "https://github.com/Akashrasheeedanjum/food-safety-quality-backend",
+    caseStudy: {
+      overview:
+        "A backend service for food safety and quality-related workflows, implemented in TypeScript and organized for API-driven application support.",
+      problem:
+        "Food safety and quality processes require reliable server-side rules, structured data handling, and APIs that frontends can depend on.",
+      solution:
+        "Built a dedicated backend repository focused on quality/safety domain logic and API structure rather than a throwaway prototype.",
+      contribution: [
+        "Implemented backend application structure in TypeScript",
+        "Organized API-oriented modules for quality workflows",
+        "Maintained a reviewable GitHub codebase",
+      ],
+      architecture: [
+        "TypeScript backend service",
+        "REST-oriented API design",
+        "Domain-focused module organization",
+      ],
+      technologies: ["TypeScript", "NestJS", "Node.js", "REST APIs"],
+      features: [
+        "Backend-focused architecture",
+        "GitHub source for technical review",
+        "Domain-oriented workflow support",
+      ],
+      challenges: [
+        "Modeling quality workflows cleanly on the server",
+        "Keeping the API structure maintainable as features grow",
+      ],
+      result:
+        "A backend codebase that demonstrates API-oriented engineering for food safety/quality workflows.",
     },
   },
 ];

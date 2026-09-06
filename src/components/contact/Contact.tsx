@@ -1,9 +1,10 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { Github, Linkedin, Mail, Send } from "lucide-react";
+import { Mail, Send } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { Reveal } from "@/components/ui/Reveal";
+import { GithubIcon, LinkedinIcon } from "@/components/ui/SocialIcons";
 
 interface FormState {
   name: string;
@@ -115,7 +116,7 @@ export function Contact() {
                 rel="noopener noreferrer"
                 className="btn btn-secondary !min-h-11"
               >
-                <Github size={16} aria-hidden />
+                <GithubIcon size={16} />
                 GitHub
               </a>
               <a
@@ -124,7 +125,7 @@ export function Contact() {
                 rel="noopener noreferrer"
                 className="btn btn-secondary !min-h-11"
               >
-                <Linkedin size={16} aria-hidden />
+                <LinkedinIcon size={16} />
                 LinkedIn
               </a>
             </div>
